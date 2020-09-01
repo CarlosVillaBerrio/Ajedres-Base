@@ -16,6 +16,10 @@ public abstract class Chessman : MonoBehaviour
 
     public virtual bool[,] PossibleMove()
     {
-        return new bool[8,8];
+        return new bool[16,16];
+    }
+    public virtual bool[,] PossibleMove16()
+    {
+        return new bool[16,16];
     }
 }

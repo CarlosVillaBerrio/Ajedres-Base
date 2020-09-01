@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Knight : Chessman
 {
-   public override bool[,] PossibleMove()
+    BoardManager Tablero;
+
+    private void Start()
+    {
+        Tablero = FindObjectOfType<BoardManager>();        
+    }
+
+    public override bool[,] PossibleMove()
    {
-        bool[,] r = new bool[8, 8];
+        bool[,] r = new bool[Tablero.tamañoTablero, Tablero.tamañoTablero];
 
         // Up Left
         KnightMove(CurrentX - 1, CurrentY + 2, ref r);
@@ -38,7 +45,7 @@ public class Knight : Chessman
     public void KnightMove(int x, int y, ref bool[,] r)
     {
         Chessman c;
-        if(x >= 0 && x < 8 && y >= 0 && y < 8)
+        if(x >= 0 && x < Tablero.tamañoTablero && y >= 0 && y < Tablero.tamañoTablero)
         {
             c = BoardManager.Instance.Chessmans[x, y];
             if (c == null)

@@ -20,9 +20,16 @@ public class BoardManager : MonoBehaviour
     Color elColor = new Vector4(1, 0, 0, 1); // ROJO
     public LineRenderer[] lineas;
 
+    // TAMAÑO DEL TABLERO
+    [Header("Tamaño del tablero 8x8 o 16x16")]
+    public int tamañoTablero;
+
     // TEMPORIZADOR
     public Text tiempoTxt;
     float contTiempo = 0;
+    string timerString;
+    int minutes;
+    int seconds;
     public bool isLevelClear;
 
     // CONTADOR DE MOVIMIENTOS
@@ -94,15 +101,14 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    void VerificadorDeDibujo()
-    {
-
-    }
-
     void ContadorTiempo()
     {
         contTiempo += Time.deltaTime;
-        tiempoTxt.text = "TIEMPO: " + contTiempo.ToString("F2");
+        seconds = (int)(contTiempo % 60);
+        minutes = (int)(contTiempo / 60);
+
+        timerString = string.Format("{00:00}:{01:00}", minutes, seconds);
+        tiempoTxt.text = "TIEMPO: " + timerString;
     }
     
     void ContadorMovimientos()
@@ -157,11 +163,19 @@ public class BoardManager : MonoBehaviour
             return;
 
         bool hasAtLeastOneMove = false;
+
         allowedMoves = Chessmans[x, y].PossibleMove();
-        for (int i = 0; i < 8; i++)
-            for (int j = 0; j < 8; j++)
+        Debug.Log(Chessmans[x, y].PossibleMove().Length);
+        //allowedMoves = PossibleMove();
+
+        for (int i = 0; i < tamañoTablero; i++)
+            for (int j = 0; j < tamañoTablero; j++)
+            {
                 if (allowedMoves[i, j])
+                {
                     hasAtLeastOneMove = true;
+                }
+            }                
 
         if (!hasAtLeastOneMove)
             return;
@@ -280,7 +294,7 @@ public class BoardManager : MonoBehaviour
     void SpawnAllChessmans()
     {
         activeChessman = new List<GameObject>();
-        Chessmans = new Chessman[8, 8];
+        Chessmans = new Chessman[tamañoTablero, tamañoTablero];
         EnPassantMove = new int[2] { -1, -1 };
 
         //// Spawn the white team!
@@ -386,17 +400,17 @@ public class BoardManager : MonoBehaviour
 
     void DrawChessboard()
     {
-        Vector3 widthLine = Vector3.right * 8;
-        Vector3 heightLine = Vector3.forward * 8;
+        Vector3 widthLine = Vector3.right * tamañoTablero; // LARGO DE FILAS
+        Vector3 heightLine = Vector3.forward * tamañoTablero; // LARGO DE COLUMNAS
 
-        for (int i = 0; i <= 8; i++)
+        for (int i = 0; i <= tamañoTablero; i++) // FILAS
         {
-            Vector3 start = Vector3.forward * i;
+            Vector3 start = (Vector3.forward * i);
             Debug.DrawLine(start, start + widthLine);
 
-            for (int j = 0; j <= 8; j++)
+            for (int j = 0; j <= tamañoTablero; j++) // COLUMNAS
             {
-                start = Vector3.right * j;
+                start = (Vector3.right * j);
                 Debug.DrawLine(start, start + heightLine);
             }
         }

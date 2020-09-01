@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BoardHighlights : MonoBehaviour
 {
-     public static BoardHighlights Instance { set; get; }
+    public static BoardHighlights Instance { set; get; }
 
     public GameObject highlightPrefab;
     List<GameObject> highlights;
+    BoardManager Tablero;
 
     private void Start()
     {
         Instance = this;
         highlights = new List<GameObject>();
+        Tablero = FindObjectOfType<BoardManager>();
     }
 
     GameObject GetHighlightObject()
@@ -30,9 +32,9 @@ public class BoardHighlights : MonoBehaviour
 
     public void HighlightAllowedMoves(bool [,] moves)
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < Tablero.tamañoTablero; i++)
         {
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < Tablero.tamañoTablero; j++)
             {
                 if (moves[i, j])
                 {
