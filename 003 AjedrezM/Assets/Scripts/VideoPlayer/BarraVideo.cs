@@ -28,7 +28,7 @@ public class BarraVideo : MonoBehaviour
 
     void Start()
     {
-        FuncionPrueba();
+        FuncionPrueba();        
     }
 
     public void ReiniciarVideo()

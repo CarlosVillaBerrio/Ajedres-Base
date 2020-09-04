@@ -4,5 +4,41 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LOGO.unity
+    guid: e6f10e6e2dbdf6744b89f04b9c5f8eb5
+  - enabled: 1
+    path: Assets/Scenes/PANTALLA INICIO.unity
+    guid: 3f7eb24ea3683df4782221da298f8de8
+  - enabled: 1
+    path: Assets/Scenes/G Nivel 01.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/G Nivel 02.unity
+    guid: 9f8b0ddf3ee02ed41aa013a2177ea167
+  - enabled: 1
+    path: Assets/Scenes/G Nivel 03.unity
+    guid: 5808aa67e23c63a4fb1d4b5868ac4182
+  - enabled: 1
+    path: Assets/Scenes/G Nivel 04.unity
+    guid: 8138e9160bb54924787557e674c7372a
+  - enabled: 1
+    path: Assets/Scenes/G Nivel 05.unity
+    guid: 52dd867711d6e9e4bb3db9765a06c98e
+  - enabled: 1
+    path: Assets/Scenes/P Nivel 01.unity
+    guid: d8dd1e5aa0e9b554f927b444a3f33acf
+  - enabled: 1
+    path: Assets/Scenes/P Nivel 02.unity
+    guid: e83b1837a5a8cbe4dab53f8738a69939
+  - enabled: 1
+    path: Assets/Scenes/P Nivel 03.unity
+    guid: 704635c4275499d47b8d8198b66022a5
+  - enabled: 1
+    path: Assets/Scenes/P Nivel 04.unity
+    guid: b898fe248793ef54fa781e6b63f44c00
+  - enabled: 1
+    path: Assets/Scenes/P Nivel 05.unity
+    guid: ff82a9f024306714882e59203b3b1e2d
   m_configObjects: {}
