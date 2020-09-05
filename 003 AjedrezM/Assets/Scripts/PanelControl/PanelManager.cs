@@ -28,4 +28,13 @@ public class PanelManager : MonoBehaviour
         botonPlay.gameObject.SetActive(false);
         botonPause.gameObject.SetActive(true);
     }
+
+    public void Pausar()
+    {
+        Time.timeScale = 0;
+    }
+    public void Despausar()
+    {
+        Time.timeScale = 1;
+    }
 }

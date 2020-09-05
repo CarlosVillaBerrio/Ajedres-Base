@@ -80,7 +80,7 @@ public class BoardManager : MonoBehaviour
             ContadorTiempo();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
             if(selectionX >= 0 && selectionY >= 0)
             {
@@ -119,39 +119,48 @@ public class BoardManager : MonoBehaviour
 
     public void DrawFunction()
     {
-        activador = !activador;
-        Debug.Log("Activador = " + activador);
-
-        if (activador)
+        if(Time.timeScale == 1)
         {
-            isDrawing = activador;
-            movedChessman = false;
-        }
-            
+            activador = !activador;
+            Debug.Log("Activador = " + activador);
 
-        if (!activador)
-        {
-            isDrawing = activador;
-            movedChessman = true;
+            if (activador)
+            {
+                isDrawing = activador;
+                movedChessman = false;
+            }
+
+
+            if (!activador)
+            {
+                isDrawing = activador;
+                movedChessman = true;
+            }
         }
+        
     }
 
     public void DrawButton(GameObject boton)
     {
-        if (activador)
+        if(Time.timeScale == 1)
         {
-            elColor = new Vector4(0, 1, 0, 1); // VERDE
-            boton.GetComponentInChildren<Text>().text = "DIBUJAR";
+            if (activador)
+            {
+                elColor = new Vector4(0, 1, 0, 1); // VERDE
+                boton.GetComponentInChildren<Text>().text = "DIBUJAR";
+            }
+
+            if (!activador)
+            {
+                elColor = new Vector4(1, 0, 0, 1); // ROJO
+                boton.GetComponentInChildren<Text>().text = "DETENIDO";
+
+            }
+
+            boton.GetComponent<Image>().color = elColor; // CAMBIA EL COLOR DEL BOTON
+
         }
-
-        if (!activador)
-        {
-            elColor = new Vector4(1, 0, 0, 1); // ROJO
-            boton.GetComponentInChildren<Text>().text = "DETENIDO";
-
-        }
-
-        boton.GetComponent<Image>().color = elColor; // CAMBIA EL COLOR DEL BOTON
+        
     }
 
     void SelectChessman(int x, int y)
