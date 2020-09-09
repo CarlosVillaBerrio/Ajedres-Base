@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 
 public class LineScript : MonoBehaviour
@@ -8,7 +9,9 @@ public class LineScript : MonoBehaviour
     LineRenderer line;
     Vector3 mousePos;
     public Material material; // MATERIAL DE LA LINEA. POR DEFECTO DE COLOR ROJO
+    public AudioSource relincho; // AL COMETER UN ERROR EL CABALLO RELINCHA
     Color elColor = new Vector4(0, 1, 0, 1); // VERDE. ESTE VA A SER EL COLOR DE LA LINEA TERMINADA
+    bool lineaMala = false;
 
     int currLines = 0;
     BoardManager admin;
@@ -66,7 +69,9 @@ public class LineScript : MonoBehaviour
         else if(line && !admin.isDrawing)
         {
             // CAMBIO DE COLOR DE LA LINEA
-            line.material.SetColor("_EmissionColor", elColor); // CAMBIA EL COLOR DEL MATERIAL UNICO ASIGNADO            
+            line.material.SetColor("_EmissionColor", elColor); // CAMBIA EL COLOR DEL MATERIAL UNICO ASIGNADO  
+
+            ComprobarLinea(line);
 
             line = null;
             currLines++;
@@ -74,6 +79,37 @@ public class LineScript : MonoBehaviour
             Debug.Log("Termina la linea");
             ComprobarDibujo();
         }
+    }
+
+    void ComprobarLinea(LineRenderer l)
+    {
+        Vector3[] lasPosiciones = new Vector3[2];
+        l.GetPositions(lasPosiciones);
+
+        for (int j = 0; j < admin.lineasDibujo; j++)
+        {
+            if (lasPosiciones[0] == admin.posPareja1[j].position && lasPosiciones[1] == admin.posPareja2[j].position || lasPosiciones[1] == admin.posPareja1[j].position && lasPosiciones[0] == admin.posPareja2[j].position)
+            {                
+                lineaMala = false;
+                break;
+            }
+            else
+            {
+                lineaMala = true;
+            }
+        }
+
+        if (lineaMala)
+        {
+            StartCoroutine(LineaErronea(l));
+        }
+
+        if(admin.contIntentos <= 0)
+        {
+            StartCoroutine(admin.LaDerrota());
+        }
+
+        lineaMala = false;
     }
 
     void ComprobarDibujo()
@@ -93,13 +129,21 @@ public class LineScript : MonoBehaviour
                     if (nLineas == admin.lineasDibujo)
                     {
                         admin.isLevelClear = true;
-                        //CompletarNivel();
                         Debug.Log("COMPLETASTE EL NIVEL");
-
+                        StartCoroutine(admin.LaVictoria());
                     }
-                }
-            }            
+                }                
+            }
         }
+    }
+
+    IEnumerator LineaErronea(LineRenderer i)
+    {
+        relincho.Play();
+        admin.contIntentos--;
+        Debug.Log(admin.contIntentos);
+        yield return new WaitForSeconds(1.2f);
+        i.gameObject.SetActive(false);
     }
 
     void LlenarArray()

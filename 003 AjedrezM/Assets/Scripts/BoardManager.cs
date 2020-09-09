@@ -2,13 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BoardManager : MonoBehaviour
 {
     public static BoardManager Instance { set; get; }
     bool[,] allowedMoves { set; get; }
-    
+
+    [Header("Paneles de victoria y derrota")]
+    public GameObject panelVictoria;
+    public GameObject panelDerrota;
+    public AudioSource sonidoVictoria;
+    public AudioSource sonidoDerrota;
+    public AudioSource sonidito;
+
+    [Header("Variable del tablero")]
     public bool isWhiteTurn = true;
 
     public Chessman[,] Chessmans { set; get; }
@@ -25,6 +34,7 @@ public class BoardManager : MonoBehaviour
     public int tamañoTablero;
 
     // TEMPORIZADOR
+    [Header("Variables del Canvas")]
     public Text tiempoTxt;
     float contTiempo = 0;
     string timerString;
@@ -35,6 +45,10 @@ public class BoardManager : MonoBehaviour
     // CONTADOR DE MOVIMIENTOS
     public Text contadorMovesTxt;
     int contMoves = 0;
+
+    // CONTADOR DE INTENTOS
+    public Text contadorIntentosTxt;
+    public int contIntentos = 2;
 
     const float tileSize = 1.0f;
     const float tileOffset = 0.5f;
@@ -67,8 +81,16 @@ public class BoardManager : MonoBehaviour
 
         Instance = this;
         SpawnAllChessmans();
-        //lineas = new LineRenderer[1];
 
+        // DESACTIVAMOS LOS PANELES DE VICTORIA Y DERROTA
+        if (panelVictoria.activeInHierarchy)
+        {
+            panelVictoria.SetActive(false);
+        }
+        if (panelDerrota.activeInHierarchy)
+        {
+            panelDerrota.SetActive(false);
+        }
     }
     // Update is called once per frame
     void Update()
@@ -78,6 +100,7 @@ public class BoardManager : MonoBehaviour
         if (!isLevelClear)
         {
             ContadorTiempo();
+            ContadorIntentos();
         }
 
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
@@ -93,7 +116,8 @@ public class BoardManager : MonoBehaviour
                 else
                 {
                     // Move the chessman
-                    MoveChessman(selectionX, selectionY);                    
+                    MoveChessman(selectionX, selectionY);
+                    sonidito.Play();
                     ContadorMovimientos();
                 }               
                 
@@ -115,6 +139,10 @@ public class BoardManager : MonoBehaviour
     {
         contMoves++;
         contadorMovesTxt.text = "MOVIMIENTOS: " + contMoves.ToString();
+    }
+    void ContadorIntentos()
+    {
+        contadorIntentosTxt.text = "INTENTOS: " + contIntentos.ToString();
     }
 
     public void DrawFunction()
@@ -280,6 +308,31 @@ public class BoardManager : MonoBehaviour
         //movedChessman = true; // INDICA QUE FUE MOVIDA LA PIEZA
         takeChessman = false; // INDICA QUE SOLTO LA PIEZA
         //isDrawing = false;
+
+    }
+    public IEnumerator LaVictoria()
+    {
+        panelVictoria.SetActive(true);
+        sonidoVictoria.Play();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("PANTALLA INICIO");
+    }
+    public IEnumerator LaDerrota()
+    {
+        panelDerrota.SetActive(true);
+        sonidoDerrota.Play();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void VictoryPanel()
+    {
+        StartCoroutine("LaVictoria");
+    }
+
+    public void DefeatPanel()
+    {
+        StartCoroutine("LaDerrota");
 
     }
 
