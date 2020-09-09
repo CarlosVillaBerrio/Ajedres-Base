@@ -1733,7 +1733,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MOVIMIENTOS: 000'
+  m_Text: 'MOVIMIENTOS: 0'
 --- !u!222 &2091553218
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2407,6 +2407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel Victoria
       objectReference: {fileID: 0}
+    - target: {fileID: 9010879126284877425, guid: bb1f08eddeab1504796a3da957f4834f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9010879126284877426, guid: bb1f08eddeab1504796a3da957f4834f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2699,6 +2704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Panel Derrota
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861909119316796657, guid: b3f671e1fd786ee448b7c4e4b9e88cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f671e1fd786ee448b7c4e4b9e88cba, type: 3}
