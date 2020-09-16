@@ -1,0 +1,599 @@
+fileFormatVersion: 2
+guid: 6dcc259c4c4f65849997bf412eca4bd7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7809157847302988670
+    second: i_0
+  - first:
+      213: -4994390157707988499
+    second: i_1
+  - first:
+      213: 2092700897458676183
+    second: i_2
+  - first:
+      213: 470770262594884780
+    second: i_3
+  - first:
+      213: 8685620795188882361
+    second: i_4
+  - first:
+      213: -1493458005822690790
+    second: i_5
+  - first:
+      213: -2408733515901695261
+    second: i_6
+  - first:
+      213: 5752520066295892402
+    second: i_7
+  - first:
+      213: -5899830171557643497
+    second: i_8
+  - first:
+      213: 689098444758795096
+    second: i_9
+  - first:
+      213: -4781755280169990232
+    second: i_10
+  - first:
+      213: -1720509715755957679
+    second: i_11
+  - first:
+      213: 6111435733766541627
+    second: i_12
+  - first:
+      213: -6753259329525250237
+    second: i_13
+  - first:
+      213: -5877248694747074169
+    second: i_14
+  - first:
+      213: 4326234202458703953
+    second: i_15
+  - first:
+      213: 6550565268632460037
+    second: i_16
+  - first:
+      213: -9161583624045194238
+    second: i_17
+  - first:
+      213: 5099654831933993430
+    second: i_18
+  - first:
+      213: 7327198471533818646
+    second: i_19
+  - first:
+      213: 3589993380619572821
+    second: i_20
+  - first:
+      213: 8437525909465489409
+    second: i_21
+  - first:
+      213: 4361904422406127100
+    second: i_22
+  - first:
+      213: 6411301475155154131
+    second: i_23
+  - first:
+      213: 3187952924738880283
+    second: i_24
+  - first:
+      213: 6376757048782567187
+    second: i_25
+  - first:
+      213: 8288788807079275862
+    second: i_26
+  - first:
+      213: 6881327324770916852
+    second: i_27
+  - first:
+      213: -8761865726657813816
+    second: i_28
+  - first:
+      213: -448301409344999219
+    second: i_29
+  - first:
+      213: 4705517305478378785
+    second: i_30
+  - first:
+      213: 2961036122216937192
+    second: i_31
+  - first:
+      213: -5335681774141910648
+    second: i_32
+  - first:
+      213: -6722105554620553817
+    second: i_33
+  - first:
+      213: 980720724319527607
+    second: i_34
+  - first:
+      213: -7149777074471639417
+    second: i_35
+  - first:
+      213: -5651326832947308816
+    second: i_36
+  - first:
+      213: -8863876280661529395
+    second: i_37
+  - first:
+      213: -8575169322428817861
+    second: i_38
+  - first:
+      213: 6712476839978124256
+    second: i_39
+  - first:
+      213: -4922373683803122453
+    second: i_40
+  - first:
+      213: 4324662948919490568
+    second: i_41
+  - first:
+      213: -2968198814977278825
+    second: i_42
+  - first:
+      213: 7313163785847031805
+    second: i_43
+  - first:
+      213: 7273379524657917062
+    second: i_44
+  - first:
+      213: 6879833731663585633
+    second: i_45
+  - first:
+      213: -8951749302008402237
+    second: i_46
+  - first:
+      213: 9051272232794143270
+    second: i_47
+  - first:
+      213: -3829526950211479131
+    second: i_48
+  - first:
+      213: -2113588527038597060
+    second: i_49
+  - first:
+      213: 7187235625001605911
+    second: i_50
+  - first:
+      213: -4777144723652399980
+    second: i_51
+  - first:
+      213: 7934670505990695267
+    second: i_52
+  - first:
+      213: -5826985637261843968
+    second: i_53
+  - first:
+      213: -3925385430156190340
+    second: i_54
+  - first:
+      213: -18274810248402626
+    second: i_55
+  - first:
+      213: 6881844470433964542
+    second: i_56
+  - first:
+      213: -4548936747934710787
+    second: i_57
+  - first:
+      213: 7833886318407157092
+    second: i_58
+  - first:
+      213: -4637988007090309839
+    second: i_59
+  - first:
+      213: -3461289226800472670
+    second: i_60
+  - first:
+      213: -5290846493938831819
+    second: i_61
+  - first:
+      213: -3983626840657532022
+    second: i_62
+  - first:
+      213: -6975591307598036149
+    second: i_63
+  - first:
+      213: 4526220120801207864
+    second: i_64
+  - first:
+      213: -5150557803213735386
+    second: i_65
+  - first:
+      213: 1163043639919135346
+    second: i_66
+  - first:
+      213: -5249436530098260808
+    second: i_67
+  - first:
+      213: -5872926111610404379
+    second: i_68
+  - first:
+      213: 7904450625877139291
+    second: i_69
+  - first:
+      213: -4269226466331140695
+    second: i_70
+  - first:
+      213: 4837175054822236276
+    second: i_71
+  - first:
+      213: -6860251954443691536
+    second: i_72
+  - first:
+      213: 1842775745402385668
+    second: i_73
+  - first:
+      213: 4436235170133746039
+    second: i_74
+  - first:
+      213: -8187366049118656153
+    second: i_75
+  - first:
+      213: 6440734166050157454
+    second: i_76
+  - first:
+      213: 7068998985728552551
+    second: i_77
+  - first:
+      213: -2041121530532481030
+    second: i_78
+  - first:
+      213: -2561013873146458212
+    second: i_79
+  - first:
+      213: -7231988658231570335
+    second: i_80
+  - first:
+      213: -5918857807558519450
+    second: i_81
+  - first:
+      213: -1915631878641155334
+    second: i_82
+  - first:
+      213: -3216172078201632427
+    second: i_83
+  - first:
+      213: 559548175845143077
+    second: i_84
+  - first:
+      213: -9112112396418743976
+    second: i_85
+  - first:
+      213: -6373139271763008705
+    second: i_86
+  - first:
+      213: -607736722803010746
+    second: i_87
+  - first:
+      213: 6866443773715292291
+    second: i_88
+  - first:
+      213: 6966629570257642980
+    second: i_89
+  - first:
+      213: -7590389762828697067
+    second: i_90
+  - first:
+      213: -3059983322446761593
+    second: i_91
+  - first:
+      213: 20723245507712177
+    second: i_92
+  - first:
+      213: -8341027985715782177
+    second: i_93
+  - first:
+      213: -1604588460516041515
+    second: i_94
+  - first:
+      213: 6340854928787250149
+    second: i_95
+  - first:
+      213: -826570676351740259
+    second: i_96
+  - first:
+      213: 4479329921313713836
+    second: i_97
+  - first:
+      213: 28592500829256955
+    second: i_98
+  - first:
+      213: 3660558764479533102
+    second: i_99
+  - first:
+      213: 4166792112607603649
+    second: i_100
+  - first:
+      213: -6197283297813286501
+    second: i_101
+  - first:
+      213: 7885165424340241022
+    second: i_102
+  - first:
+      213: 4362214924761348034
+    second: i_103
+  - first:
+      213: -5106965367975257869
+    second: i_104
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 2
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: i_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73e27bffa3bf5c60800000000000000
+      internalID: 7809157847302988670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1bb1cec9c50bab0800000000000000
+      internalID: -4994390157707988499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d16a2ee064ca0d10800000000000000
+      internalID: 2092700897458676183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca419c04f03888600800000000000000
+      internalID: 470770262594884780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbaaf64816898870800000000000000
+      internalID: 8685620795188882361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1aa9fb3bdb264be0800000000000000
+      internalID: -1493458005822690790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea0a1a11a5729ed0800000000000000
+      internalID: -2408733515901695261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b98fdaa58e05df40800000000000000
+      internalID: 5752520066295892402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eb7a83af11d277f41b11f473459cbc56
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
