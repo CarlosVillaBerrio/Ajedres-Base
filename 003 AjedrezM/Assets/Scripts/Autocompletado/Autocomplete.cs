@@ -38,6 +38,11 @@ public class Autocomplete : MonoBehaviour
         StartCoroutine("CompleteFifthLevel");
     }
 
+    public void FlechaVertical_8x8()
+    {        
+        StartCoroutine("CompleteSeventhLevel");
+    }
+
     #region Cuadrado, tablero 8x8
     private IEnumerator CompleteFirstLevel() 
     {
@@ -330,5 +335,83 @@ public class Autocomplete : MonoBehaviour
         figura.SetActive(true);
     }
     
+    #endregion
+
+    #region Flecha vertical, tablero 8x8
+    private IEnumerator CompleteSeventhLevel()
+    {
+        float offset = 0.5f;
+
+        Vector3 position = new Vector3(1f + offset, 0, 0f + offset);
+        
+        horse.transform.position = position;
+        GameObject t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(1f);
+
+        position.x = 2f + offset;
+        position.z = 2f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(1f);
+
+        position.x = 3f + offset;
+        position.z = 4f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(1f);
+
+        position.x = 4f + offset;
+        position.z = 2f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);        
+
+        yield return new WaitForSeconds(1f);
+
+        position.x = 5f + offset;
+        position.z = 0f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(1f);
+     
+        position.x = 3f + offset;
+        position.z = 1f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(1f);
+
+        position.x = 1f + offset;
+        position.z = 0f + offset;
+        
+        horse.transform.position = position;
+        t = Instantiate(particles, horse.transform.position, Quaternion.identity); 
+        points.Add(t);
+        t.transform.SetParent(transform);
+
+        yield return new WaitForSeconds(0.3f);
+        
+        figura.SetActive(true);
+    }
     #endregion
 }
