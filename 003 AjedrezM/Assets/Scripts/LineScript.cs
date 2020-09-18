@@ -45,7 +45,7 @@ public class LineScript : MonoBehaviour
                 line.material = lineMaterial;
                 
                 mousePos = gameObject.transform.position;
-                mousePos.y = 0.04f;
+                mousePos.y = 0.0f;
                 line.SetPosition(0, mousePos);
                 line.SetPosition(1, mousePos);
                 Debug.Log("Inicia una nueva la linea");
@@ -55,14 +55,14 @@ public class LineScript : MonoBehaviour
         else if (line && admin.isDrawing) // TERMINA DE DIBUJAR LA LINEA Y PERMITE INICIAR OTRA
         {
             mousePos = gameObject.transform.position;
-            mousePos.y = 0.04f;
+            mousePos.y = 0.0f;
             line.SetPosition(1, mousePos);        
         }
         
         else if(!admin.movedChessman && line && admin.isDrawing) // ARRASTRA EL PUNTO INICIAL HASTA EL FINAL MIENTRAS SE CUMPLA LA CONDICION
         {
             mousePos = gameObject.transform.position;
-            mousePos.y = 0.04f;
+            mousePos.y = 0.0f;
             line.SetPosition(1, mousePos);
         }
         
