@@ -16,6 +16,7 @@ public class Autocomplete : MonoBehaviour
     private bool canMove = false;
     
     [SerializeField] private Transform[] points;
+    [SerializeField] private List<GameObject> particlesList = new List<GameObject>();
     
     public void Awake()
     {
@@ -49,6 +50,7 @@ public class Autocomplete : MonoBehaviour
     public void StartAutocomplete()
     {
         canMove = true;
+
     }
 
     void Update()
@@ -61,6 +63,7 @@ public class Autocomplete : MonoBehaviour
             if (Vector3.Distance(target.transform.position, horse.transform.position) <= 0.2f)
             {
                 GetNext();
+                ShowParticles();
             }
         }
     }
@@ -75,6 +78,28 @@ public class Autocomplete : MonoBehaviour
             Debug.Log("Funciona");
             figura.SetActive(true);
             canMove = false;
+            StartCoroutine("GoBackToPosition");
+        }
+    }
+
+    void ShowParticles()
+    {
+        GameObject p = Instantiate(particles, target.transform.position, Quaternion.identity);
+        particlesList.Add(p);
+        p.transform.SetParent(transform);
+    }
+
+    IEnumerator GoBackToPosition()
+    {
+        yield return new WaitForSeconds(3);
+
+        figura.SetActive(false);
+        horse.transform.position = new Vector3(1.5f, 0, 0.5f);
+        index = 0;
+
+        foreach (GameObject g in particlesList)
+        {
+            g.SetActive(false);
         }
     }
 }

@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horse: {fileID: 0}
   figura: {fileID: 778722996}
-  particles: {fileID: 1544515709757658678, guid: 87c7ee9a7bdfee34588659f4886337e3,
+  particles: {fileID: 4979171923595189674, guid: b411e72ff6b5e4346bdd5a671f0961c9,
     type: 3}
   target: {fileID: 0}
   speed: 2
